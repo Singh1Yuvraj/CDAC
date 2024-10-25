@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    /> -->
+    <style>
+      body {
+    background-color: #080710;
+}
+.background {
+    /* width: 1400px;
+    height: 500px; */
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child {
+    background: linear-gradient(#1845ad, #23a2f6);
+    right: 330px;
+    bottom: 340px;
+}
+.shape:last-child {
+    background: linear-gradient(to right, #ff512f, #f09819);
+    left: 330px;
+    top: 340px;
+}
+form {
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.13);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+}
+form * {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input,
+select {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+}
+::placeholder {
+    color: #e5e5e5;
+}
+button {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.help {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #e5e5e5;
+    cursor: pointer;
+}
+.name, .password {
+    display: flex;
+    gap: 20px; 
+    justify-content: space-between;
+     margin-top: 20px; 
+}
+#country {
+            background-color:#080710;
+        }
+
+.name label, .password label {
+    /* margin-top: 20px; */
+    font-size: 16px;
+    font-weight: 500;
+    flex-basis: 48%; 
+}
+
+.name input, .password input {
+    margin-top: 8px;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.name input:first-child, .password input:first-child {
+    margin-right: 10px; 
+}
+
+@media (max-width: 1024px) {
+    
+    form {
+        width: 90%;
+    }
+    
+    .shape:first-child {
+      bottom: 317px;
+      right: 395px;
+    }
+    .shape:last-child {
+      left: 380px;
+      top: 335px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    form {
+        width: 90%;
+        padding: 40px 25px;
+    }
+
+    .name, .password {
+        flex-direction: column;
+    }
+
+    .name label, .password label {
+        flex-basis: 100%;
+    }
+
+    .name input, .password input {
+        width: 100%;
+    }
+
+    .shape:first-child {
+        /* width: 150px;
+        height: 150px;
+        right: 10px;
+        top: -100px; */
+        display: none;
+    }
+
+    .shape:last-child {
+        /* width: 150px;
+        height: 150px;
+        left: 10px;
+        bottom: -100px; */
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 100%;
+        padding: 30px 15px;
+    }
+
+    .shape:first-child, .shape:last-child {
+        /* width: 120px;
+        height: 120px; */
+        display: none;
+    }
+
+    .shape:first-child {
+        /* right: 5px;
+        top: -80px; */
+        display: none;
+    }
+
+    .shape:last-child {
+        left: 5px;
+        bottom: -80px;
+    }
+    
+    .name, .password, .help, button {
+        text-align: center;
+    }
+}
+nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+          background-color: rgba(255, 255, 255, 0.1);
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000;
+      }
+      .logo {
+          font-size: 24px;
+          font-weight: bold;
+          color: #ffffff;
+      }
+      nav a {
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: 500;
+          margin: 0 15px;
+      }
+      nav a:hover {
+          color: #23a2f6;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <nav>
+        <div class="logo">QueueEase</div>
+        <div>
+            <a href="hero.html">Home</a>
+        <a href="registration.html">Register</a>
+        <a href="login.html">Login</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="contactUs.html">Contact Us</a>
+            <!-- <a href="registration.html">Register</a> -->
+        </div>
+    </nav>
+
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <form>
+      <h3>Register</h3>
+      <div class="name">
+        <label for="firstName">First Name</label>
+        <input type="text" placeholder="First Name" id="firstName" />
+
+        <label for="lastName">Last Name</label>
+        <input type="text" placeholder="Last Name" id="lastName" />
+      </div>
+      <label for="country">Country / Region</label>
+      <select id="country">
+        <option value="India">India</option>
+        <option value="United States">United States</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Canada">Canada</option>
+      </select>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" />
+
+      <label for="email">Email</label>
+      <input type="email" placeholder="name@example.com" id="email" />
+      <div class="password">
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" />
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        id="confirmPassword"
+      />
+    </div>
+
+      <label for="phone">Phone Number</label>
+      <div style="display: flex">
+        <select style="width: 25%; margin-right: 5px; background-color: #080710;">
+          <option value="+91">+91 (India)</option>
+          <option value="+1">+1 (USA)</option>
+          <option value="+44">+44 (UK)</option>
+        </select>
+        <input
+          type="tel"
+          style="width: 75%"
+          placeholder="Phone Number"
+          id="phone"
+        />
+      </div>
+
+      <button type="submit">Create Account</button>
+
+      <div class="help">Help</div>
+    </form>
+  </body>
+</html>

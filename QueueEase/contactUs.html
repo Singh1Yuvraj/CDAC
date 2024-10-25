@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" /> -->
+  <style>
+    body {
+        background-color: #080710;
+        font-family: "Poppins", sans-serif;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .background {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .shape {
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    .shape:first-child {
+        background: linear-gradient(#1845ad, #23a2f6);
+        right: 300px;
+        top: 100px;
+    }
+    .shape:last-child {
+        background: linear-gradient(to right, #ff512f, #f09819);
+        left: 300px;
+        bottom: 100px;
+    }
+    .contact-container {
+        width: 500px;
+        background-color: rgba(255, 255, 255, 0.13);
+        padding: 50px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        text-align: center;
+        margin-top: 120px; 
+    }
+    h1 {
+        font-size: 32px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: #ffffff;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    button {
+        padding: 15px;
+        background-color: #ffffff;
+        color: #080710;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+          background-color: rgba(255, 255, 255, 0.1);
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 1000;
+      }
+      .logo {
+          font-size: 24px;
+          font-weight: bold;
+          color: #ffffff;
+      }
+      nav a {
+          color: #ffffff;
+          text-decoration: none;
+          font-weight: 500;
+          margin: 0 15px;
+      }
+      nav a:hover {
+          color: #23a2f6;
+      }
+
+  </style>
+</head>
+<body>
+  
+  <nav>
+    <div class="logo">QueueEase</div>
+    <div>
+        <a href="hero.html">Home</a>
+        <a href="registration.html">Register</a>
+        <a href="login.html">Login</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="contactUs.html">Contact Us</a>
+        
+    </div>
+</nav>
+
+  
+  <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+  </div>
+
+  
+  <div class="contact-container">
+    <h1>Let's Talk?</h1>
+    <p>It's all about the humans behind a brand and those experiencing it – we're right there, in the middle, ensuring smooth performance and quick responses.</p>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email *" required>
+      <input type="tel" placeholder="Phone">
+      <textarea placeholder="Tell Us About Your Project *" required rows="4"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</body>
+</html>
